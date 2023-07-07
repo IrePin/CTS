@@ -4,16 +4,16 @@ namespace _Core.Scripts.Pipe
 {
     public class PipeLift : MonoBehaviour
     {
-        [SerializeField] private Pipe _pipe;
+        [SerializeField] private Pipe pipe;
         [SerializeField] private Vector2 yLocalLimits;
         [SerializeField] private float liftRate;
         private float _currentLiftRate;
         private bool _isOperating;
-        private Transform PipeTransform => _pipe.transform;
+        private Transform PipeTransform => pipe.transform;
 
         private void Start()
         {
-            SetLevel(_pipe.Level);
+            SetLevel(pipe.Level);
         }
 
         public void StartLiftingUp()
@@ -47,7 +47,7 @@ namespace _Core.Scripts.Pipe
             Vector3 pipeLocalPosition = PipeTransform.localPosition;
             pipeLocalPosition.y = level;
             PipeTransform.localPosition = pipeLocalPosition;
-            _pipe.SetLevel(level);
+            pipe.SetLevel(level);
         }
     }
 }
