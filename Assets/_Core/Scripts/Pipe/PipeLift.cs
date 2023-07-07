@@ -6,6 +6,8 @@ namespace _Core.Scripts.Pipe
     {
         [SerializeField] private Pipe pipe;
         [SerializeField] private Vector2 yLocalLimits;
+        [SerializeField] private float minPipeHeight = 0.5f;
+        
         [SerializeField] private float liftRate;
         private float _currentLiftRate;
         private bool _isOperating;
@@ -13,7 +15,7 @@ namespace _Core.Scripts.Pipe
 
         private void Start()
         {
-            SetLevel(pipe.Level);
+            SetLevel(minPipeHeight);
         }
 
         public void StartLiftingUp()
@@ -38,7 +40,7 @@ namespace _Core.Scripts.Pipe
             if (!_isOperating) return;
             float y = PipeTransform.localPosition.y;
             y += _currentLiftRate * Time.deltaTime;
-            y = Mathf.Clamp(y, yLocalLimits.x, yLocalLimits.y);
+            y = Mathf.Clamp(y, minPipeHeight, yLocalLimits.y);
             SetLevel(y);
         }
 

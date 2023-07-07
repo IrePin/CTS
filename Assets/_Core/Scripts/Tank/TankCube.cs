@@ -23,7 +23,7 @@ namespace _Core.Scripts.Tank
 
         private void Update()
         {
-            Debug.Log(WaterLevelNormalized);
+            Debug.Log(SectionArea);
         }
 
         public void SetWaterLevelClamp(float waterLevel)
@@ -38,6 +38,10 @@ namespace _Core.Scripts.Tank
             OnWaterLevelChangedNormalized?.Invoke(WaterLevelNormalized);
         }
 
+        public void FillTank()
+        {
+            SetWaterLevel(Volume);
+        }
         public void AddVolume(float volume)
         {
             var dh = volume / SectionArea;
