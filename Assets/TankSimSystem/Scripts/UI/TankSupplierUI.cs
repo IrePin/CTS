@@ -8,13 +8,21 @@ namespace TankSimSystem.UI
         [SerializeField] private OnHoldMouseAction levelUpButton;
         [SerializeField] private OnHoldMouseAction levelDownButton;
 
-        private void Start()
+        private void OnEnable()
         {
             levelUpButton.OnButtonDown += supplier.StartSupplying;
             levelUpButton.OnButtonUp += supplier.StopOperating;
             
             levelDownButton.OnButtonDown += supplier.StartDraining;
             levelDownButton.OnButtonUp += supplier.StopOperating;
+        }
+        private void OnDisable()
+        {
+            levelUpButton.OnButtonDown -= supplier.StartSupplying;
+            levelUpButton.OnButtonUp -= supplier.StopOperating;
+            
+            levelDownButton.OnButtonDown -= supplier.StartDraining;
+            levelDownButton.OnButtonUp -= supplier.StopOperating;
         }
     }
 }

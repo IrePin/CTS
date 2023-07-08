@@ -5,7 +5,7 @@ namespace TankSimSystem
 {
     public class TankCube : MonoBehaviour
     {
-        public const float MaxWaterLevel = 10f;
+        private const float MaxWaterLevel = 10f;
         [field: SerializeField] public float WaterLevel { get; private set; }
 
         [Header("TankVolume")] 
@@ -15,8 +15,8 @@ namespace TankSimSystem
         [SerializeField] private float width;
 
 
-        public float VolumeArea => length * width * height; 
-        public float Volume => VolumeArea * (WaterLevel / 10);
+        public float TankVolume => length * width * height; 
+        public float WaterVolume => TankVolume * (WaterLevel / 10);
         public float WaterLevelNormalized => WaterLevel / MaxWaterLevel;
         public event Action<float> OnWaterLevelChangedNormalized;
 
@@ -30,13 +30,13 @@ namespace TankSimSystem
         {
             WaterLevel = waterLevel;
             OnWaterLevelChangedNormalized?.Invoke(WaterLevelNormalized);
-            /*Debug.Log("WaterLevelNormalized = " + WaterLevelNormalized);
-            Debug.Log("VolumeArea = " + VolumeArea);
-            Debug.Log("Volume = " + Volume);*/
+            Debug.Log("WaterLevelNormalized = " + WaterLevelNormalized);
+            Debug.Log("TankVolume = " + TankVolume);
+            Debug.Log("WaterVolume = " + WaterVolume);
         }
         public void AddVolume(float volume)
         {
-            var dh = volume / VolumeArea;
+            var dh = volume / TankVolume;
             SetWaterLevel(WaterLevel + dh);
         }
     }

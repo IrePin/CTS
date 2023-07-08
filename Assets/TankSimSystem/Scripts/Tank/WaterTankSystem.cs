@@ -48,8 +48,8 @@ namespace TankSimSystem
 
         private void TransferWaterClamped(TankCube fromTank, TankCube toTank, float volume)
         {
-            var fromWaterVolume = fromTank.Volume;
-            var toWaterVolume = toTank.Volume;
+            var fromWaterVolume = fromTank.WaterVolume;
+            var toWaterVolume = toTank.WaterVolume;
             var maxTransferVolume = (fromWaterVolume - toWaterVolume) / 2f;
             var clampedTransferVolume = Mathf.Min(volume, maxTransferVolume);
             // transfer water
@@ -62,7 +62,7 @@ namespace TankSimSystem
             float tankLevel = tank.WaterLevel;
             float pipeLevel = pipe.Level;
             float dLevel = tankLevel - pipeLevel;
-            float area = tank.VolumeArea;
+            float area = tank.TankVolume;
             return dLevel * area;
         }
 

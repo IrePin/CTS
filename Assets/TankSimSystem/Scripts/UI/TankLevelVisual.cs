@@ -18,7 +18,6 @@ namespace TankSimSystem.UI
             UpdateLabel(waterTank.WaterLevelNormalized);
             visual.SetActive(false);
         }
-
         private void ToggleVisual()
         {
             visual.SetActive(!visual.activeSelf);
@@ -35,5 +34,7 @@ namespace TankSimSystem.UI
             
             return percentage.ToString($"N{precisionDigits}") + "%";
         }
+        
+        
     }
 }

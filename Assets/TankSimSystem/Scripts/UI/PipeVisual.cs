@@ -2,15 +2,14 @@
 
 namespace TankSimSystem.UI
 {
-    public class PipeVisual: MonoBehaviour
+    public class PipeVisual : MonoBehaviour
     {
-        
         [SerializeField] private Valve valve;
         [SerializeField] private Material onValveOpenMaterial;
         [SerializeField] private Material onValveClosedMaterial;
         [SerializeField] private MeshRenderer visual;
 
-        private void Start()
+        private void OnEnable()
         {
             valve.OnOpen += OnValveOpen;
             valve.OnClose += OnValveClose;
@@ -19,9 +18,17 @@ namespace TankSimSystem.UI
         private void OnValveOpen()
         {
             visual.material = onValveOpenMaterial;
-        }private void OnValveClose()
+        }
+
+        private void OnValveClose()
         {
             visual.material = onValveClosedMaterial;
+        }
+
+        private void OnDisable()
+        {
+            valve.OnOpen -= OnValveOpen;
+            valve.OnClose -= OnValveClose;
         }
     }
 }
