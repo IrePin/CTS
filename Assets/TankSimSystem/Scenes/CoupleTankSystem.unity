@@ -605,18 +605,6 @@ PrefabInstance:
       propertyPath: pipeLift
       value: 
       objectReference: {fileID: 1207269479}
-    - target: {fileID: 3211031262422324991, guid: 68e014e2bb39b814ebc32c167cd271b0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3211031263115735175, guid: 68e014e2bb39b814ebc32c167cd271b0, type: 3}
-      propertyPath: m_Name
-      value: Pipe Lift View
-      objectReference: {fileID: 0}
-    - target: {fileID: 3211031263170311566, guid: 68e014e2bb39b814ebc32c167cd271b0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3211031263391450308, guid: 68e014e2bb39b814ebc32c167cd271b0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
