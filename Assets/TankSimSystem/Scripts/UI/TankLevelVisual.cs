@@ -1,9 +1,7 @@
-using _Core.Scripts.Mouse;
-using _Core.Scripts.Tank;
 using TMPro;
 using UnityEngine;
 
-namespace _Core.Scripts.UI
+namespace TankSimSystem.UI
 {
     public class TankLevelVisual : MonoBehaviour
     {
@@ -34,6 +32,7 @@ namespace _Core.Scripts.UI
         private string GetPercentage(float waterLevelNormalized)
         {
             float percentage = waterLevelNormalized * 100f;
+            
             return percentage.ToString($"N{precisionDigits}") + "%";
         }
     }

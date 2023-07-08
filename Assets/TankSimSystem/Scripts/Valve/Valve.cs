@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace _Core.Scripts.Valve
+namespace TankSimSystem
 {
     public class Valve : MonoBehaviour
     {

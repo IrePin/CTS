@@ -1,7 +1,6 @@
-﻿using _Core.Scripts.Mouse;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace _Core.Scripts.Pipe
+namespace TankSimSystem.UI
 {
     public class PipeUI : MonoBehaviour
     {

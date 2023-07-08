@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Core.Scripts.Tank
+namespace TankSimSystem
 {
     public class TankSupplier: MonoBehaviour
     {
@@ -8,7 +8,7 @@ namespace _Core.Scripts.Tank
         [SerializeField] private float waterSupplyLevelRate;
         private bool _isOperating;
         private float _currentSupplyLevelRate;
-
+        
         public void StartSupplying()
         {
             _currentSupplyLevelRate = waterSupplyLevelRate;

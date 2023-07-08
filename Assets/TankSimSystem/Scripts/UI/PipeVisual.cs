@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
-namespace _Core.Scripts.Pipe
+
+namespace TankSimSystem.UI
 {
     public class PipeVisual: MonoBehaviour
     {
         
-        [SerializeField] private Valve.Valve valve;
+        [SerializeField] private Valve valve;
         [SerializeField] private Material onValveOpenMaterial;
         [SerializeField] private Material onValveClosedMaterial;
         [SerializeField] private MeshRenderer visual;

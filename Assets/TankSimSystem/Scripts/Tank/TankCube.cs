@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace _Core.Scripts.Tank
+namespace TankSimSystem
 {
     public class TankCube : MonoBehaviour
     {
@@ -10,21 +10,15 @@ namespace _Core.Scripts.Tank
 
         [Header("TankVolume")] 
         
-        [SerializeField] private float height = 10;
-        private const float Length = 1;
-        private const float Width = 4;
-        
+        [SerializeField] private float height;
+        [SerializeField] private  float length;
+        [SerializeField] private float width;
 
-        public float SectionArea =>
-            2 * (Length * Width + Length * height + Width * height); 
-        public float Volume => SectionArea * WaterLevel;
+
+        public float VolumeArea => length * width * height; 
+        public float Volume => VolumeArea * (WaterLevel / 10);
         public float WaterLevelNormalized => WaterLevel / MaxWaterLevel;
         public event Action<float> OnWaterLevelChangedNormalized;
-
-        private void Update()
-        {
-            Debug.Log(SectionArea);
-        }
 
         public void SetWaterLevelClamp(float waterLevel)
         {
@@ -36,15 +30,13 @@ namespace _Core.Scripts.Tank
         {
             WaterLevel = waterLevel;
             OnWaterLevelChangedNormalized?.Invoke(WaterLevelNormalized);
-        }
-
-        public void FillTank()
-        {
-            SetWaterLevel(Volume);
+            /*Debug.Log("WaterLevelNormalized = " + WaterLevelNormalized);
+            Debug.Log("VolumeArea = " + VolumeArea);
+            Debug.Log("Volume = " + Volume);*/
         }
         public void AddVolume(float volume)
         {
-            var dh = volume / SectionArea;
+            var dh = volume / VolumeArea;
             SetWaterLevel(WaterLevel + dh);
         }
     }

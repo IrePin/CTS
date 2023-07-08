@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace _Core.Scripts.Mouse
+namespace TankSimSystem
 {
     public class OnMouseDownAction : MonoBehaviour
     {

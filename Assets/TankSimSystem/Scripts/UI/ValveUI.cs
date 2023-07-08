@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Core.Scripts.Valve
+namespace TankSimSystem.UI
 {
     public class ValveUI : MonoBehaviour
     {
@@ -13,6 +13,13 @@ namespace _Core.Scripts.Valve
         {
             openValveButton.onClick.AddListener(valve.Open);
             closeValveButton.onClick.AddListener(valve.Close);
+            closeValveButton.image.color = Color.white;
+        }
+
+        private void LateUpdate()
+        {
+            openValveButton.image.color = valve.IsOpen ? Color.green : Color.white;
+            closeValveButton.image.color = valve.IsOpen ? Color.white : Color.green;
         }
     }
 }

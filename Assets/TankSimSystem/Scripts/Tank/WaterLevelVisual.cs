@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Core.Scripts.Tank
+namespace TankSimSystem
 {
     public class WaterLevelVisual : MonoBehaviour
     {

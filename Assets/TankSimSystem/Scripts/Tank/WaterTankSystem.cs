@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-namespace _Core.Scripts.Tank
+namespace TankSimSystem
 {
     public class WaterTankSystem: MonoBehaviour
     {
         [SerializeField] private TankCube leftWaterTank;
         [SerializeField] private TankCube rightWaterTank;
-        [SerializeField] private Pipe.Pipe connectionPipe;
-        [SerializeField] private Valve.Valve valve;
-        [SerializeField] private WaterFlow.WaterFlow waterFlow;
+        [SerializeField] private Pipe pipe;
+        [SerializeField] private Valve valve;
+        [SerializeField] private WaterFlow waterFlow;
         private bool _isTanksConnected;
 
         private void Start()
@@ -30,7 +30,7 @@ namespace _Core.Scripts.Tank
         private void Update()
         {
             if (!_isTanksConnected) return;
-            float pipeLevel = connectionPipe.Level;
+            float pipeLevel = pipe.Level;
             float maxTankLevel = Mathf.Max(leftWaterTank.WaterLevel, rightWaterTank.WaterLevel);
             if (pipeLevel >= maxTankLevel) return;
             float transferVolume = GetWaterFlowRate() * Time.deltaTime;
@@ -60,9 +60,9 @@ namespace _Core.Scripts.Tank
         private float GetVolumeTillPipe(TankCube tank)
         {
             float tankLevel = tank.WaterLevel;
-            float pipeLevel = connectionPipe.Level;
+            float pipeLevel = pipe.Level;
             float dLevel = tankLevel - pipeLevel;
-            float area = tank.SectionArea;
+            float area = tank.VolumeArea;
             return dLevel * area;
         }
 

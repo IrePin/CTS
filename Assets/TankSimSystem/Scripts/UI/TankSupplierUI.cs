@@ -1,8 +1,6 @@
-using _Core.Scripts.Mouse;
-using _Core.Scripts.Tank;
 using UnityEngine;
 
-namespace _Core.Scripts.UI
+namespace TankSimSystem.UI
 {
     public class TankSupplierUI : MonoBehaviour
     {

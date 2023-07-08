@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Core.Scripts.Pipe
+namespace TankSimSystem
 {
     public class Pipe : MonoBehaviour
     {

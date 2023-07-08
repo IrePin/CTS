@@ -3,11 +3,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace _Core.Scripts.Mouse
+namespace TankSimSystem
 {
-    public class OnHoldMouseAction : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler 
+    public class OnHoldMouseAction : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
     {
-     
+
         private Image _image;
         public event Action OnButtonDown;
         public event Action OnButtonUp;
