@@ -802,7 +802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137464320802725030, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 5137464320802725030, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -852,6 +852,10 @@ PrefabInstance:
       propertyPath: rightTank
       value: 
       objectReference: {fileID: 5143618290405352198}
+    - target: {fileID: 5137464321468547915, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
+      propertyPath: <WaterFlowRate>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5137464321519559266, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.25
