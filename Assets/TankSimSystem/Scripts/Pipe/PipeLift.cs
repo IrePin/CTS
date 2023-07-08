@@ -7,7 +7,7 @@ namespace TankSimSystem
         [SerializeField] private Pipe pipe;
         [SerializeField] private Vector2 yLocalLimits;
         [SerializeField] private float minPipeHeight = 0.5f;
-        
+
         [SerializeField] private float liftRate;
         private float _currentLiftRate;
         private bool _isOperating;
@@ -15,7 +15,7 @@ namespace TankSimSystem
 
         private void Start()
         {
-            SetLevel(minPipeHeight);
+            SetPipeHeight(minPipeHeight);
         }
 
         public void StartLiftingUp()
@@ -38,18 +38,18 @@ namespace TankSimSystem
         private void Update()
         {
             if (!_isOperating) return;
-            float y = PipeTransform.localPosition.y;
-            y += _currentLiftRate * Time.deltaTime;
-            y = Mathf.Clamp(y, minPipeHeight, yLocalLimits.y);
-            SetLevel(y);
+            float currentHeight = PipeTransform.localPosition.y;
+            float newHeight = currentHeight + _currentLiftRate * Time.deltaTime;
+            newHeight = Mathf.Clamp(newHeight, minPipeHeight, yLocalLimits.y);
+            SetPipeHeight(newHeight);
         }
 
-        private void SetLevel(float level)
+        private void SetPipeHeight(float height)
         {
             Vector3 pipeLocalPosition = PipeTransform.localPosition;
-            pipeLocalPosition.y = level;
+            pipeLocalPosition.y = height;
             PipeTransform.localPosition = pipeLocalPosition;
-            pipe.SetLevel(level);
+            pipe.SetLevel(height);
         }
     }
 }

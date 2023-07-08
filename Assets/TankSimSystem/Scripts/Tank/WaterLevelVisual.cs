@@ -5,11 +5,10 @@ namespace TankSimSystem
     public class WaterLevelVisual : MonoBehaviour
     {
         [SerializeField] private TankCube tankCube;
-        [SerializeField] private Transform cubeTransform; // Reference to the cube object's Transform component
+        [SerializeField] private Transform cubeTransform;
 
-        private Vector3 _initialScale; // Initial scale of the cube
-        private const float MaxHeight = 1f; // Maximum height of the cube
-
+        private Vector3 _initialScale; 
+        private const float MaxHeight = 1f; 
         private void Start()
         {
             _initialScale = cubeTransform.localScale;

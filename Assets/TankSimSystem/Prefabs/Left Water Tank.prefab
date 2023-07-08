@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3781509710771955306}
   - component: {fileID: 5033597687578151443}
   - component: {fileID: 5033597687578151440}
+  - component: {fileID: 2068796910286379068}
   m_Layer: 0
   m_Name: Left Water Tank
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5033597687578151441}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47,9 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <WaterLevel>k__BackingField: 5
+  height: 10
   length: 1
   width: 4
-  height: 7
 --- !u!114 &5033597687578151440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +65,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterTank: {fileID: 5033597687578151443}
   waterSupplyLevelRate: 1.5
+--- !u!114 &2068796910286379068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5033597687578151441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433238e85237a804d8092cecf39e8a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankCube: {fileID: 5033597687578151443}
+  cubeTransform: {fileID: 7768567631106832187}
 --- !u!1 &7768567629863101707
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7768567630011549134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.48, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7768567630379209662}
@@ -242,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.61, y: 3.29}
+  m_AnchoredPosition: {x: 1.5, y: 4.07}
   m_SizeDelta: {x: 27.91, y: 4.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7768567630379209656
@@ -387,7 +402,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7768567631106832187}
-  - component: {fileID: 7768567631106832186}
   m_Layer: 0
   m_Name: TankWaterFill
   m_TagString: Untagged
@@ -404,26 +418,12 @@ Transform:
   m_GameObject: {fileID: 7768567631106832184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: -0.49999997, z: -0.5}
-  m_LocalScale: {x: 1, y: 0.16, z: 1}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children:
   - {fileID: 7768567631875390585}
   m_Father: {fileID: 3592590343321565615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7768567631106832186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7768567631106832184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 433238e85237a804d8092cecf39e8a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 7768567631106832187}
-  heightSlider: {fileID: 0}
 --- !u!1 &7768567631875390590
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,8 +547,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8305868140382473014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 7, z: 1}
+  m_LocalPosition: {x: 0.92, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 10, z: 1}
   m_Children:
   - {fileID: 7768567631106832187}
   - {fileID: 7768567629863101706}

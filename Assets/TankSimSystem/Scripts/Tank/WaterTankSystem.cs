@@ -2,7 +2,7 @@
 
 namespace TankSimSystem
 {
-    public class WaterTankSystem: MonoBehaviour
+    public class WaterTankSystem : MonoBehaviour
     {
         [SerializeField] private TankCube leftWaterTank;
         [SerializeField] private TankCube rightWaterTank;
@@ -52,7 +52,7 @@ namespace TankSimSystem
             var toWaterVolume = toTank.WaterVolume;
             var maxTransferVolume = (fromWaterVolume - toWaterVolume) / 2f;
             var clampedTransferVolume = Mathf.Min(volume, maxTransferVolume);
-            // transfer water
+            // Transfer water
             fromTank.AddVolume(-clampedTransferVolume);
             toTank.AddVolume(clampedTransferVolume);
         }

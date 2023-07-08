@@ -426,11 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625d7220dcc741cfb2e6960ab8b1321e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1294347973 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3219707101219095750, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-  m_PrefabInstance: {fileID: 5143618290405352197}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1313984083
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,25 +462,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 524900873105016957, guid: 0e69a416b6135c641a5e135eab09b441, type: 3}
   m_PrefabInstance: {fileID: 524900874459662963}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1710164864 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 196790558643796460, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-  m_PrefabInstance: {fileID: 5143618290405352197}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1710164865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710164864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 433238e85237a804d8092cecf39e8a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankCube: {fileID: 5143618290405352198}
-  cubeTransform: {fileID: 1294347973}
 --- !u!1 &1928103346
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +751,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 196790558643796461, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
   m_PrefabInstance: {fileID: 5143618290405352197}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710164864}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 454ecec61657496a9cce16ede7b7da04, type: 3}
@@ -836,14 +812,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5137464320802725031, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
-      propertyPath: minPipeHeight
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137464320802725031, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
-      propertyPath: yMinLocalLimits.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5137464321468547914, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
       propertyPath: leftTank
       value: 
@@ -852,18 +820,6 @@ PrefabInstance:
       propertyPath: rightTank
       value: 
       objectReference: {fileID: 5143618290405352198}
-    - target: {fileID: 5137464321468547915, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
-      propertyPath: <WaterFlowRate>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137464321519559266, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137464321693191589, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4803bd99d27e79b448bef90fe1c0558d, type: 3}
 --- !u!1001 &5143618290405352197
@@ -876,34 +832,6 @@ PrefabInstance:
     - target: {fileID: 196790558643796460, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
       propertyPath: m_Name
       value: RightWaterTank
-      objectReference: {fileID: 0}
-    - target: {fileID: 196790558643796462, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 196790558643796462, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: height
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 196790558643796462, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: length
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219707100148020788, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219707101053329475, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219707101053329475, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219707101219095750, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8294313981050312087, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
       propertyPath: m_RootOrder
@@ -949,19 +877,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8555357661772761682, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3219707101219095751, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
 --- !u!114 &5143618290405352198 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 196790558643796462, guid: 4308d0240a84be64eb49b04f3b0448c9, type: 3}
   m_PrefabInstance: {fileID: 5143618290405352197}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710164864}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbe083ec9fe9c124bbec6d1c7d22a359, type: 3}
@@ -979,14 +902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1928103347}
     m_Modifications:
-    - target: {fileID: 3592590343321565615, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3592590343321565615, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.92
-      objectReference: {fileID: 0}
     - target: {fileID: 3781509710771955306, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1034,46 +949,6 @@ PrefabInstance:
     - target: {fileID: 5033597687578151441, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
       propertyPath: m_Name
       value: LeftWaterTank
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033597687578151443, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: height
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033597687578151443, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: <WaterLevel>k__BackingField
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567630011549129, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567630011549129, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567630011549134, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567630379209662, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567630379209662, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567631106832186, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: tankCube
-      value: 
-      objectReference: {fileID: 3320720231127117046}
-    - target: {fileID: 7768567631106832186, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: heightSlider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768567631106832187, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c117a9f0b24ffd448bfaf9576f32477, type: 3}
